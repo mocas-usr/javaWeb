@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <!--国家的对应列表-->
+    <select id="country" onchange="add1(this.value)">//对应thisoption选择
+        <option value="0">请选择</option>
+        <option value="中国">中国</option>
+        <option value="德国">德国</option>
+        <option value="美国">美国</option>
+    </select>
+    <select id="city">
+
+    </select>
+
+    <script type="text/javascript">
+        //定义城市
+        var arr0=new Array(3);
+        arr0[0]=["中国","南京","西安","苏州","杭州"];
+        arr0[1]=["德国","柏林","慕尼黑","狼堡","法兰克福"];
+        arr0[2]=["美国","纽约","华盛顿","休斯顿","底特律"];
+
+        /*选择国家，展示对应城市列表*/
+        function add1(val) {
+            // alert(val);
+            /*获取城市名称*/
+            var cit=document.getElementById("city");
+            var   options1=cit.getElementsByTagName("option");//获取城市名称下option属性
+            /*避免每次选择国家都会增添新城市，所以每次先清除上次遗留的城市*/
+            for (var k=0;k<options1.length;k++)
+            {
+                var opts=options1[k];
+                cit.removeChild(opts);
+                k--;  //length每次都会减小，所以选择k--，保证循环次数
+            }
+
+            /*循环寻找国家，与传递的国家名称比较*/
+            for (var i=0;i<arr0.length;i++)
+            {
+                // alert(0);
+                var arr1=arr0[i]; //取得第一列，arr1是一维数组
+                var firstval=arr1[0]; //这个是数值，对应国家名称
+                if (firstval==val)  //选择到对应国家
+                {
+                    // alert(firstval);
+                    for (var j=1;j<arr1.length;j++)
+                    {
+                        // alert(2);
+                        /*城市名称进行遍历*/
+                        var val1=arr1[j];
+                        // alert(val1);
+                        /*将城市名称加入显示列表。先创建标签，再加入节点*/
+                        var opt1=document.createElement("option");
+                        var text1=document.createTextNode(val1);
+
+                        opt1.appendChild(text1);
+                        cit.appendChild(opt1);
+
+                    }
+                }
+
+            }
+
+        }
+    </script>
+</body>
+</html>

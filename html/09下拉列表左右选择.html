@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div id="leftt" style="float: left "> //设置div  float左边
+        <div>
+            <select id="select1" multiple="multiple" style="width:100px;height:100px"> //这里可以显示成选线列出来
+                <option> 111</option>
+                <option>222</option>
+                <option>AAA</option>
+                <option>NNN</option>
+            </select>
+        </div>
+        <div>
+            <input type="button" value="选中添加到右边" onclick="toright()"/><br/>
+            <input type="button" value="全部添加到右边"onclick="alltoright()" />
+        </div>
+
+    </div>
+
+
+<!--设置右边部分的显示操作-->
+    <div id="rightt">
+        <div>
+            <select id="select2"multiple="multiple" style="width:100px;height:100px">
+                <option> AASDA</option>
+                <option>ASDAF123</option>
+                <option>AAAbbbbb</option>
+                <option>ccccasd</option>
+            </select>
+        </div>
+        <div>
+            <input type="button" value="选中添加到左边"onclick="toleft()" /><br/>
+            <input type="button" value="全部添加到左边" onclick="alltoleft()"/>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        /*将选中的选项移动到右边*/
+        function toright() {
+            /*得到select1，2标签*/
+            var select1=document.getElementById("select1");
+            var select2=document.getElementById("select2");
+            /*得到标签下的option选项标签*/
+            var opt1=select1.getElementsByTagName("option");
+            for (var i=0;i<opt1.length;i++)
+            {
+                var option1=opt1[i];
+                // alert(1);
+                if(option1.selected==true)
+                {
+                    // alert(0);
+                    select2.appendChild(option1); //标签元素的转移
+                    i--;
+                }
+
+            }
+
+        }
+        /*将左边所有的元素转移到右边*/
+        function alltoright() {
+            var s1=document.getElementById("select1");
+            var s2=document.getElementById("select2");
+            var opt2=s1.getElementsByTagName("option");
+            for (var i=0;i<opt2.length;i++)
+            {
+                var ops=opt2[i];
+                /*这里不需要判断是否选中*/
+                s2.appendChild(ops);
+                i--;
+            }
+
+        }
+        /*同理，将右边转移到左边*/
+        function toleft() {
+
+            /*得到select1*/
+            var select1=document.getElementById("select1");
+            var select2=document.getElementById("select2");
+
+            var opt2=select2.getElementsByTagName("option");
+            for (var i=0;i<opt2.length;i++)
+            {
+                var option2=opt2[i];
+                // alert(1);
+                if(option2.selected==true)
+                {
+                    // alert(0);
+                    select1.appendChild(option2);
+                    i--;
+                }
+
+            }
+        }
+        
+        function alltoleft() {
+            var s1=document.getElementById("select1");
+            var s2=document.getElementById("select2");
+            var opt2=s2.getElementsByTagName("option");
+            for (var i=0;i<opt2.length;i++)
+            {
+                var ops=opt2[i];
+                s1.appendChild(ops);
+                i--;
+            }
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>

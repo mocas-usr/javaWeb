@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <div id="times">
+
+    </div>
+    <script type="text/javascript">
+
+        /*获得当前时间，并且将它显示*/
+           function getday() {
+               var date01=new Date();
+               var d1=date01.toLocaleString();
+               var div1=document.getElementById("times");
+               div1.innerHTML=d1;//innerHTML与div结合，实现动态变化
+
+           } 
+          setInterval("getday();",1000)  //这个是动态更新，每隔…毫秒就执行一次js代码
+    </script>
+</body>
+</html>

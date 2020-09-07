@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE TVSCHEDULE SYSTEM "F:\javaweb\xnldom\src\tv.dtd"><!-- 使用外部的dtd文件 -->
+<TVSCHEDULE NAME="ad">
+    <CHANNEL CHAN="节目">
+        <BANNER></BANNER>
+        <DAY>
+            <DATE>2020-4-24</DATE>
+            <HOLIDAY>xxyy</HOLIDAY>
+        </DAY>
+        <DAY>
+            <DATE>2020425</DATE>
+            <PROGRAMSLOT VTR="ssa">
+                <TIME>1534</TIME>
+                <TITLE>五一假</TITLE>
+            </PROGRAMSLOT>
+        </DAY>
+    </CHANNEL>
+
+
+</TVSCHEDULE>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <style type="text/css">
+
+        </style>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("<table border='1' bordercolor='blue' >")
+
+        //循环行，列
+        for (var i=1;i<=9;i++)
+        {
+            document.write("<tr>")
+            for (var k=1;k<=i;k++)
+            {
+                document.write("<td>")
+                document.write(i+"*"+k+"="+i*k+"&nbsp;")
+                document.write("</td>")
+            }
+            /*document.write("</br>");*/
+            document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

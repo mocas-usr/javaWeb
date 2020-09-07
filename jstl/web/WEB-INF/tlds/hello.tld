@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xml="http://www.w3.org/XML/1998/namespace"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+						http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd ">
+
+    <!--以下部分，name和uri随意设置-->
+    <tlib-version>1.0</tlib-version>
+    <short-name>ywq</short-name>
+    <uri>http://www.ywq.cn/tags</uri>
+    <tag>
+        <!--下面是实现标签内容，上面可以复制模板-->
+        <name>hello</name><!--这是设置jsp中的显示名称-->
+        <tag-class>fmt.mytag</tag-class><!--这是类路径-->
+        <body-content>empty</body-content>
+    </tag>
+    <tag>
+        <!--下面是实现标签内容，上面可以复制模板-->
+        <name>mytag3</name>
+        <tag-class>fmt.mytag3</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+    <tag>
+        <!--下面是实现标签内容，上面可以复制模板-->
+        <name>mytag4</name>
+        <tag-class>fmt.mytag4</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>test</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue><!--设置是是否可以为el表达式-->
+        </attribute>
+    </tag>
+</taglib>

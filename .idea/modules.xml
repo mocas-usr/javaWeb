@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/JDBC/JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MVC/MVC.iml" filepath="$PROJECT_DIR$/MVC/MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ajax/ajax.iml" filepath="$PROJECT_DIR$/ajax/ajax.iml" />
+      <module fileurl="file://$PROJECT_DIR$/html/html.iml" filepath="$PROJECT_DIR$/html/html.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httpservlet/httpservlet.iml" filepath="$PROJECT_DIR$/httpservlet/httpservlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabean/javabean.iml" filepath="$PROJECT_DIR$/javabean/javabean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaweb.iml" filepath="$PROJECT_DIR$/javaweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsp/jsp.iml" filepath="$PROJECT_DIR$/jsp/jsp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jstl/jstl.iml" filepath="$PROJECT_DIR$/jstl/jstl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/listenFilter/listenFilter.iml" filepath="$PROJECT_DIR$/listenFilter/listenFilter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/responserequest/responserequest.iml" filepath="$PROJECT_DIR$/responserequest/responserequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upload/upload.iml" filepath="$PROJECT_DIR$/upload/upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webserver/webserver.iml" filepath="$PROJECT_DIR$/webserver/webserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xnldom/xnldom.iml" filepath="$PROJECT_DIR$/xnldom/xnldom.iml" />
+    </modules>
+  </component>
+</project>

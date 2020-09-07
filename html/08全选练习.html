@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="boxid" onclick="selallno()"/> 全选/全不选
+    <br/>
+    <input type="checkbox" name="love"/>篮球
+    <input type="checkbox" name="love"/>羽毛球
+    <input type="checkbox" name="love"/>乒乓球
+    <input type="checkbox" name="love"/>排球
+    <br/>
+    <input type="button" value="全选" onclick="selectall()">
+    <input type="button" value="全不选" onclick="selectno()">
+    <input type="button" value="反选" onclick="otherselect()">
+
+    <script type="text/javascript">
+
+        /*选择全部checkedbox*/
+            function selectall() {
+                /*获取所有要操作的复选框
+                * 返回数组，同一名字的数组*/
+                var loves=document.getElementsByName("love");//返回是数组
+                for( var i=0;i<loves.length;i++)
+                {
+                    var love1=loves[i];
+                    love1.checked=true;//将checked为true就是成功选择
+
+                }
+            }
+            /*全部不选择*/
+            function  selectno()
+            {
+                var loves=document.getElementsByName("love");//返回是数组
+                for( var i=0;i<loves.length;i++)
+                {
+                    var love1=loves[i];
+                    love1.checked=false;
+
+                }
+            }
+            function otherselect () {
+                var loves11=document.getElementsByName("love");//返回是数组
+                for (var i=0;i<loves11.length;i++)
+                {
+                    var love2=loves11[i];
+                    /*如果选中，则变为false，否则变为true*/
+                    if (love2.checked==true)
+                    {
+                        love2.checked=false;
+                    }
+                    else
+                    {
+                        love2.checked=true;
+                    }
+
+                }
+            }
+            /*全选，或者全不选，由boxlove22决定*/
+            function selallno() {
+                var loves22=document.getElementById("boxid");
+                if (loves22.checked==true)
+                {
+                    selectall();
+                }
+                else
+                {
+                    selectno();
+                }
+
+
+            }
+
+    </script>
+</body>
+</html>

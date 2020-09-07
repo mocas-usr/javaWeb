@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <ul id="ulid">
+        <li>111</li>
+        <li>2222</li>
+        <li>333</li>
+        <li>54444</li>
+    </ul>
+    <br/>
+    <input type="button" value="add" onclick="add1()">
+
+    <script type="text/javascript">
+        /*末尾添加节点的常用操作*/
+        function add1() {
+            //获取ul标签元素
+            var ul1=document.getElementById('ulid');
+            //创建标签元素
+            var li1=document.createElement("li");
+            //创建文本属性元素
+            var txt1=document.createTextNode('5555');
+            //节点一一加上去
+            li1.appendChild(txt1);
+            ul1.appendChild(li1);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    行：<input type="text" id="h">
+    列：<input type="text" id="l">
+    <br/>
+    <input type="button" value="生成" onclick="add2();"/>
+    <br/>
+    <div id="divv">
+
+    </div>
+
+    <script type="text/javascript">
+
+        function add2() {
+
+            /*输出自己生成的行和列*/
+            var h=document.getElementById("h").value;
+            var l=document.getElementById("l").value;
+
+            var tab1="<table border='1' bordercolor='blue'>";
+            //循环行，可以实现<tr>
+            for (var i=1;i<=h;i++)
+            {
+                tab1+="<tr>"
+                /*循环列*/
+                for (var j=1;j<=l;j++)
+                {
+                    tab1+="<td>qqad</td>"
+                    // tab1+="</td>"
+                }
+
+                tab1+="</tr>"
+            }
+            /*循环结束，要加</table>*/
+            tab1+="</table>"
+            alert(tab1);//弹框显示构建的html代码
+            /*将html代码输入div里面，生成表格*/
+            var divv=document.getElementById("divv");
+            divv.innerHTML=tab1;
+        }
+    </script>
+
+</body>
+</html>

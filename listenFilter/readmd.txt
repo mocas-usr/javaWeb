@@ -1,0 +1,9 @@
+统计工作需要用filter
+过滤器不做拦截操作，只用来统计。
+
+整个网站需要一个map，
+map什么时候创建：使用servletContextListener，服务器启动时创建，
+
+map保存到什么地方：servletContext
+	map需要在filter中保存数据
+	map需要在页面上使用，打印map的数据

@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="nihao">
+    <output-path>$PROJECT_DIR$/out/artifacts/nihao</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="webserver/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="webserver" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
